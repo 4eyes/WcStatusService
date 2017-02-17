@@ -1,0 +1,12 @@
+name: WcStatusService
+vendor: Michel Georgy
+architecture: [amd64, armhf, armv8]
+icon: meta/wcstatus.png
+version: 0.2
+services:
+ - name: WcStatusService
+   description: "wc status service for wcStatus App"
+   start: ./bin/WcStatusService
+   caps:
+     - networking
+     - network-service
