@@ -1,0 +1,20 @@
+name: wcstatusservice
+icon: snap/wcstatus.png
+version: 0.2
+grade: devel
+confinement: devmode
+summary: wc status service for wcStatus app
+description: wc status service for wcStatus App
+
+apps:
+ wcstatusservice:
+  command: bin/wcstatusservice
+  daemon: simple
+  plugs:
+   - network
+   - network-bind
+parts:
+ wcstatusservice:
+  plugin: go
+  source: https://github.com/4eyes/wcstatusservice.git
+  source-type: git
